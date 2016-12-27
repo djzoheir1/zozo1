@@ -4,7 +4,19 @@
 <meta charset="ISO-8859-1">
 <title>ZOZO 1 Connecting.. </title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script language="javascript" type="text/javascript">
 
+ 
+	 var xhr = new XMLHttpRequest;
+	 
+   xhr.open("POST", "https://ziboard.github.io/zozo/", true); 
+     
+     xhr.onreadystatechange = function() {
+                                   if (xhr.readyState == 4 && xhr.status == 200) {
+                                	                       document.getElementById('test').innerHTML=xhr.responseText;
+                                                        }	
+									                     }
+ </script>
 
 </head>
 <body>
@@ -18,7 +30,7 @@
 
 <br/><br/>
 
-Connecting to Board Setting....
+<p id="test" style=" color:white">Z</p>
 <br/><br/>
 </div>
 </body>
