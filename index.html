@@ -6,7 +6,9 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <script language="javascript" type="text/javascript">
 
- 
+ function init()
+  {
+
 	 var xhr = new XMLHttpRequest;
 	 
   
@@ -18,6 +20,10 @@
 					        }
      xhr.open("POST", "https://ziboard.github.io/zozo/", true);
      xhr.send(); 
+  }
+	
+	window.addEventListener("load", init, false);
+
  </script>
 
 </head>
