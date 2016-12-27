@@ -5,28 +5,25 @@
 <title>ZOZO 1 Connecting.. </title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script language="javascript" type="text/javascript">
-function init1()
-  {
-	  document.getElementById('test').innerHTML="zo ok load";
-	  init();
-	 } 
+
  function init()
   {
 
 	 var xhr = new XMLHttpRequest;
-	 
-  
-     
+	 var zo="zoreq";
+  document.getElementById('test').innerHTML="zo ok load";
+	  
+      xhr.open("POST", "https://ziboard.github.io/zozo/", true);
+     xhr.send(zo); 
+	  
      xhr.onreadystatechange = function() {
                                    if (xhr.readyState == 4 && xhr.status == 200) {
                                 	                       document.getElementById('test').innerHTML=xhr.responseText;
                                                         }	
 					        }
-     xhr.open("POST", "https://ziboard.github.io/zozo/", true);
-     xhr.send(); 
   }
 	
-	window.addEventListener("load", init1, false);
+	window.addEventListener("load", init, false);
 
  </script>
 
